@@ -1,3 +1,3 @@
-class Meme < ApplicationRecord
-    belongs_to: user
+class Meme < ActiveRecord::Base
+    belongs_to :user
 end
