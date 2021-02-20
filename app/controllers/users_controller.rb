@@ -12,6 +12,11 @@ class UsersController < ApplicationController
         render "login"
     end
     def validate
-        render plain: "hello"
+        user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
+        if(user)
+            render plain: user[:username]
+        else
+            render plain: "wrong"
+        end
     end
 end
