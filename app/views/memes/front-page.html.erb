@@ -1,4 +1,14 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<ul>
+   <li><a href="/"><%= @current_user ? "Hello #{User.find(@current_user)[:username]}" : "Hello" %></a></li>
+   <% if(@current_user) %>
+      <li><a href="/dashboard">Submit a meme</a></li>
+      <li style="float:right"><a class="active" href="/logout">Logout</a></li>
+   <% else %>
+      <li style="float:right"><a class="active" href="/login">Login</a></li>
+   <% end %>
+</ul> 
 <div class="container">
    <div class="d-flex flex-row flex-wrap justify-content-center">
       <% Meme.all.each do |meme| %>

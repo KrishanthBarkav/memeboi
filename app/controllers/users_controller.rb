@@ -15,9 +15,13 @@ class UsersController < ApplicationController
         user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
         if(user)
             session[:current_user_id] = user.id
-            render plain: user[:username]
+            redirect_to "/"
         else
             render plain: "wrong"
         end
+    end
+    def logout
+        session[:current_user_id] = nil
+        redirect_to "/"
     end
 end
