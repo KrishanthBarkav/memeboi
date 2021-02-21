@@ -8,6 +8,9 @@ img {
      margin: 5px;
  }
  ul {
+    width: 100%;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; 
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -30,4 +33,11 @@ img {
   /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #111;
+  }
+  .empty{
+    min-height: 100px;
+  }
+  .your-memes{
+    padding-left: 300px;
+    color: white;
   }

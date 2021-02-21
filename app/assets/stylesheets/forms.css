@@ -4,6 +4,7 @@ html,body{
 background-image: url('https://c4.wallpaperflare.com/wallpaper/502/259/582/feelsbadman-pepe-meme-memes-wallpaper-preview.jpg');
 background-size: cover;
 background-repeat: no-repeat;
+background-attachment: fixed;
 height: 100%;
 font-family: 'Numans', sans-serif;
 }
@@ -14,7 +15,7 @@ align-content: center;
 }
 
 .card{
-height: 370px;
+height: 300px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
