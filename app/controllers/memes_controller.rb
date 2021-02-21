@@ -13,6 +13,6 @@ class MemesController < ApplicationController
     end
     def create
         Meme.create!(url: params[:url], user_id: session[:current_user_id])
-        redirect_to "/dashboard"
+        redirect_to "/"
     end
 end
