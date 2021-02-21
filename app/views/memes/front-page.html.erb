@@ -13,13 +13,54 @@
 <div class="empty">
 </div>
 <div class="container">
+   <%
+      one = []
+      two = []
+      three = []
+      four = []
+      l = Meme.all.length - 1
+      for i in 0..l
+         if(i % 4 == 0)
+            one.append(Meme.all[i])
+         elsif(i % 4 == 1)
+            two.append(Meme.all[i])
+         elsif(i % 4 == 2)
+            three.append(Meme.all[i])
+         elsif(i % 4 == 3)
+            four.append(Meme.all[i])
+         end
+      end
+   %>
    <div class="d-flex flex-row flex-wrap justify-content-center">
-      <% Meme.all.each do |meme| %>
+      
          <div class="d-flex flex-column">
-            <a href="<%= meme[:url] %>">
-               <img src="<%= meme[:url] %>" alt="meme" width="260">
-            </a> 
+            <% one.each do |meme| %>
+               <a href="<%= meme[:url] %>">
+                  <img src="<%= meme[:url] %>" alt="meme" width="260">
+               </a> 
+            <% end %>
          </div>
-      <% end %>
+         <div class="d-flex flex-column">
+            <% two.each do |meme| %>
+               <a href="<%= meme[:url] %>">
+                  <img src="<%= meme[:url] %>" alt="meme" width="260">
+               </a> 
+            <% end %>
+         </div>
+         <div class="d-flex flex-column">
+            <% three.each do |meme| %>
+               <a href="<%= meme[:url] %>">
+                  <img src="<%= meme[:url] %>" alt="meme" width="260">
+               </a> 
+            <% end %>
+         </div>
+         <div class="d-flex flex-column">
+            <% four.each do |meme| %>
+               <a href="<%= meme[:url] %>">
+                  <img src="<%= meme[:url] %>" alt="meme" width="260">
+               </a> 
+            <% end %>
+         </div>
+      
    </div>
 </div>
