@@ -1,3 +1,10 @@
 img{
     padding: 20px;
 }
+.flex-column { 
+    max-width : 260px;
+}
+ 
+ img {
+     margin: 5px;
+ }

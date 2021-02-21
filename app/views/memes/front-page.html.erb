@@ -1,32 +1,12 @@
-# <img src="" alt="meme" width="500" height="600"> 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
-<style>
-   .flex-column { 
-       max-width : 260px;
-   }
-    
-    img {
-        margin: 5px;
-    }
-</style>
 <div class="container">
    <div class="d-flex flex-row flex-wrap justify-content-center">
-      <div class="d-flex flex-column">
-         <img src="<%= Meme.first[:url] %>" width="500" class="img-fluid">
-         <img src="https://preview.redd.it/ifn021hppmi61.jpg?width=640&height=512&crop=smart&auto=webp&s=c8e8bef816c9ec7aabec476b02adcce1963688da" width="500" class="img-fluid">
-      </div>
-      <div class="d-flex flex-column">
-         <img src="https://preview.redd.it/7ly9tn728ni61.jpg?width=640&height=472&crop=smart&auto=webp&s=b506c160d84b22b6f321559eb9632802e003506c" width="500" class="img-fluid">
-         <img src="<%= Meme.first[:url] %>" width="500" class="img-fluid">
-      </div>
-      <div class="d-flex flex-column">
-         <img src="<%= Meme.first[:url] %>" class="img-fluid">
-         <img src="<%= Meme.first[:url] %>" class="img-fluid">
-      </div>
-      <div class="d-flex flex-column">
-         <img src="<%= Meme.first[:url] %>" class="img-fluid">
-         <img src="<%= Meme.first[:url] %>" class="img-fluid">
-      </div>
+      <% Meme.all.each do |meme| %>
+         <div class="d-flex flex-column">
+            <a href="<%= meme[:url] %>">
+               <img src="<%= meme[:url] %>" alt="meme" width="260">
+            </a> 
+         </div>
+      <% end %>
    </div>
 </div>
