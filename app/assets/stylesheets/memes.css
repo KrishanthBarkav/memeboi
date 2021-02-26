@@ -51,3 +51,20 @@ img{
     font-family: FontAwesome;
     font-style: normal;
   }
+  .imgg{
+    max-width: 600px;
+  }
+  .comments{
+    padding-left: 400px;
+    padding-right: 400px;
+    color: white;
+  }
+  .comment{
+    padding-left: 50px;
+  }
+  .comment-btn{
+    padding: 0px;
+    padding-left: 5px;
+    height: 50px;
+    width: 53px;
+  }

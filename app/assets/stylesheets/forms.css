@@ -10,7 +10,7 @@ font-family: 'Numans', sans-serif;
 }
 
 .container{
-height: 100%;
+min-height: 700px;
 align-content: center;
 }
 

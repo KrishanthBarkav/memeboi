@@ -40,7 +40,22 @@ class MemesController < ApplicationController
         
     end
     def comment
-        @id = params[:id]
-        render plain: params
+        @meme_id = params[:id]
+        @user_id = session[:current_user_id]
+        if(@user_id)
+            render "comments"
+        else
+            render plain: "login first"
+        end
+    end
+    def comment_add
+        @current_user = session[:current_user_id]
+        if(@current_user)
+            Comment.create!(comment: params[:comment], user_id: session[:current_user_id].to_i, meme_id: params[:id])
+            redirect_to "/meme/"+params[:id].to_s
+        else
+            render plain: "login first"
+        end
+        
     end
 end
