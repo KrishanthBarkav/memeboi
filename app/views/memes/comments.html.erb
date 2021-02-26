@@ -11,7 +11,7 @@
 </div>
 
 <div class="comments">
-    <form action="/comment/<%= @meme_id %>" method="POST">
+    <form action="/comment/<%= @meme_id %>" method="POST" autocomplete="off">
         <div class="form-group">
             <input type="text-field" class="form-control form-control-lg" id="comment" placeholder="your comment here" name="comment">
             <button type="submit" class="btn btn-primary">Submit</button>
