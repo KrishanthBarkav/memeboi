@@ -1,12 +1,10 @@
 img{
     padding: 20px;
+    padding-bottom: 2px;
 }
 .flex-column { 
     max-width : 260px;
 }
-img {
-     margin: 5px;
- }
  ul {
     width: 100%;
     position: fixed; /* Set the navbar to fixed position */
@@ -39,5 +37,9 @@ img {
   }
   .your-memes{
     padding-left: 300px;
+    color: white;
+  }
+  .likes{
+    padding-left: 20px;
     color: white;
   }
