@@ -43,6 +43,10 @@ img{
     padding-left: 20px;
     color: white;
   }
+  .like{
+    min-width: 70px;
+    padding-left: 20px;
+  }
   i{
     font-family: FontAwesome;
     font-style: normal;

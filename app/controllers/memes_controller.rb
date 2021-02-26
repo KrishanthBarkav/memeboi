@@ -39,4 +39,8 @@ class MemesController < ApplicationController
         end
         
     end
+    def comment
+        @id = params[:id]
+        render plain: params
+    end
 end

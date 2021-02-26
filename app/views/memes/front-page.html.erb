@@ -50,10 +50,11 @@
                      end
                   %>
                   <% if(flag == 0) %>
-                     <input onclick="this.form.submit()" type="image" src="https://img.icons8.com/wired/64/000000/like.png" alt="Submit" width="48" height="48">
+                     <input class="like" onclick="this.form.submit()" type="image" src="https://img.icons8.com/wired/64/000000/like.png" alt="Submit" width="48" height="48">
                   <% else %>
-                     <input onclick="this.form.submit()" type="image" src="https://img.icons8.com/dusk/64/000000/like.png" alt="Submit" width="48" height="48">
+                     <input class="like" onclick="this.form.submit()" type="image" src="https://img.icons8.com/dusk/64/000000/like.png" alt="Submit" width="48" height="48">
                   <% end %>
+                  <a href="/meme/<%= meme.id %>"><img class="comment" src="https://img.icons8.com/dotty/80/000000/send-comment.png"/></a>
                <% end%>
                <p class="likes"><%= meme.likes.length %> likes</p>
             <% end %>
@@ -73,9 +74,9 @@
                      end
                   %>
                   <% if(flag == 0) %>
-                     <input onclick="this.form.submit()" type="image" src="https://img.icons8.com/wired/64/000000/like.png" alt="Submit" width="48" height="48">
+                     <input class="like" onclick="this.form.submit()" type="image" src="https://img.icons8.com/wired/64/000000/like.png" alt="Submit" width="48" height="48">
                   <% else %>
-                     <input onclick="this.form.submit()" type="image" src="https://img.icons8.com/dusk/64/000000/like.png" alt="Submit" width="48" height="48">
+                     <input class="like" onclick="this.form.submit()" type="image" src="https://img.icons8.com/dusk/64/000000/like.png" alt="Submit" width="48" height="48">
                   <% end %>
                <% end%>
                <p class="likes"><%= meme.likes.length %> likes</p>
@@ -96,11 +97,12 @@
                      end
                   %>
                   <% if(flag == 0) %>
-                     <input onclick="this.form.submit()" type="image" src="https://img.icons8.com/wired/64/000000/like.png" alt="Submit" width="48" height="48">
+                     <input class="like" onclick="this.form.submit()" type="image" src="https://img.icons8.com/wired/64/000000/like.png" alt="Submit" width="48" height="48">
                   <% else %>
-                     <input onclick="this.form.submit()" type="image" src="https://img.icons8.com/dusk/64/000000/like.png" alt="Submit" width="48" height="48">
+                     <input class="like" onclick="this.form.submit()" type="image" src="https://img.icons8.com/dusk/64/000000/like.png" alt="Submit" width="48" height="48">
                   <% end %>
                <% end%>
+               
                <p class="likes"><%= meme.likes.length %> likes</p>
             <% end %>
          </div>
@@ -119,9 +121,9 @@
                      end
                   %>
                   <% if(flag == 0) %>
-                     <input onclick="this.form.submit()" type="image" src="https://img.icons8.com/wired/64/000000/like.png" alt="Submit" width="48" height="48">
+                     <input class="like" onclick="this.form.submit()" type="image" src="https://img.icons8.com/wired/64/000000/like.png" alt="Submit" width="48" height="48">
                   <% else %>
-                     <input onclick="this.form.submit()" type="image" src="https://img.icons8.com/dusk/64/000000/like.png" alt="Submit" width="48" height="48">
+                     <input class="like" onclick="this.form.submit()" type="image" src="https://img.icons8.com/dusk/64/000000/like.png" alt="Submit" width="48" height="48">
                   <% end %>
                <% end%>
                <p class="likes"><%= meme.likes.length %> likes</p>

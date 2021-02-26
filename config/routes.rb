@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get "dashboard", to: "memes#showd"
   post "dashboard", to: "memes#create"
   put "likes/:id", to: "memes#update"
+  get "meme/:id", to: "memes#comment"
 end

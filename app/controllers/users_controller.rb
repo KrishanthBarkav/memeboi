@@ -5,8 +5,12 @@ class UsersController < ApplicationController
     def create
         username = params[:username]
         password = params[:password]
-        User.create!(username: username, password: password)
-        redirect_to "/login"
+        if(User.where(username: username).length == 0)
+            User.create!(username: username, password: password)
+            redirect_to "/login"
+        else
+            render plain: "username already taken"
+        end
     end
     def login
         render "login"
