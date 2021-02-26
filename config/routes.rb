@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "logout", to: "users#logout"
   get "dashboard", to: "memes#showd"
   post "dashboard", to: "memes#create"
+  put "likes/:id", to: "memes#update"
 end
